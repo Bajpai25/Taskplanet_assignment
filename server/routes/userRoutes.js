@@ -4,6 +4,7 @@ const upload = require('../middleware/multer');
 const cloudinary = require('../utils/Cloudinary');
 const User = require('../models/User');
 
+
 // POST: Create a new user with multiple images
 router.post('/upload', upload.array('images', 5), async function (req, res) {
   try {

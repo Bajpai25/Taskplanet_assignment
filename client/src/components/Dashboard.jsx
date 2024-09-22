@@ -14,7 +14,7 @@ const Dashboard = () => {
   
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/users');
+      const response = await axios.get('https://taskplanet-assignment-backend.onrender.com/api/users');
       setUsers(response.data);
       setLoading(false);
     } catch (error) {
@@ -32,7 +32,7 @@ const Dashboard = () => {
     fetchUsers();
 
     // Initialize Socket.io connection to the backend
-    const socket = io('http://localhost:5000'); // Connect to the backend's Socket.io server
+    const socket = io('https://taskplanet-assignment-backend.onrender.com'); // Connect to the backend's Socket.io server
 
     // Listen for the 'new-user' event emitted by the backend
     socket.on('new-user', (newUser) => {

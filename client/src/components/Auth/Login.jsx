@@ -15,7 +15,7 @@ const Login = () => {
 
         try {
             // Send JSON payload
-            const response = await axios.post('http://localhost:5000/api/auth/login', {
+            const response = await axios.post('https://taskplanet-assignment-backend.onrender.com/api/auth/login', {
                 email,
                 password,
             });

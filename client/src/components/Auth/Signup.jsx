@@ -21,7 +21,7 @@ const Signup = () => {
         formData.append('role', role);
 
         try {
-            await axios.post('http://localhost:5000/api/auth/signup', formData);  // Removed Content-Type header
+            await axios.post('https://taskplanet-assignment-backend.onrender.com/api/auth/signup', formData);  // Removed Content-Type header
             toast.success('Registered successfully');
             navigate('/');
         } catch (err) {
